@@ -6,7 +6,7 @@ export async function graphqlRequest(
   variables?: any,
   token?: string,
 ) {
-  const url = process.env.NEXT_PUBLIC_GRAPHQL_URL || process.env.GRAPHQL_URL;
+  const url = process.env.NEXT_PUBLIC_GRAPHQL_URL || process.env.GRAPHQL_URL || "https://ronijenkinsserver-production.up.railway.app/graphql";
   if (!url) throw new Error("GRAPHQL_URL is not set in environment variables.");
 
   const headers: Record<string, string> = {

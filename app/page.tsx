@@ -45,7 +45,7 @@ export default async function Home({
     }
   `;
 
-  const GRAPHQL_URL = process.env.NEXT_PUBLIC_GRAPHQL_URL || process.env.GRAPHQL_URL;
+  const GRAPHQL_URL = process.env.NEXT_PUBLIC_GRAPHQL_URL || process.env.GRAPHQL_URL || "https://ronijenkinsserver-production.up.railway.app/graphql";
   if (!GRAPHQL_URL) {
     return (
       <div className="min-h-screen bg-[#0f172a] flex items-center justify-center p-8">
